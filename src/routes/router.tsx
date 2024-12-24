@@ -28,6 +28,14 @@ export const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
+      {
+        path: 'page/:error',
+        element: <Error404 />,
+      },
+      {
+        path: '/*',
+        element: <Navigate to='/page/:error' />,
+      },
     ],
   },
 ]);
